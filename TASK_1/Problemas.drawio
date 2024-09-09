@@ -439,6 +439,21 @@
         <mxCell id="UkASmaHppKkqqfTuaA3G-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Modelo relacional problema 1&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="79" y="70" width="351" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="rnY1uUOv-mfe-vqsW1P0-1" value="Escuela(&lt;u&gt;PK clave_escuela&lt;/u&gt;, nombre_escuela)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="79" y="658" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rnY1uUOv-mfe-vqsW1P0-2" value="Escuela_Cursos(&lt;u&gt;PK clave_escuela_id_curso&lt;/u&gt;)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="74" y="688" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rnY1uUOv-mfe-vqsW1P0-3" value="Cursos(&lt;u&gt;PK id curso&lt;/u&gt;, nombre_curso, duracion_curso)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="79" y="718" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rnY1uUOv-mfe-vqsW1P0-4" value="Alumno_Cursos(&lt;u&gt;PK matricula_id_curso&lt;/u&gt;, fecha_inscripcion)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="79" y="748" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rnY1uUOv-mfe-vqsW1P0-5" value="Alumno(&lt;u&gt;PK matricula,&lt;/u&gt; nombre_alumno, apellido1, apellido2, CURP, FK clave_ecuela&amp;nbsp;)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="79" y="778" width="480" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
