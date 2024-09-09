@@ -965,6 +965,24 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="SJvhGIPo5r1_6xaDVYK6-1" value="Tienda(&lt;u&gt;PK id_tienda&lt;/u&gt;, nombre_tienda, municipio, calle, colonia, CP)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="610" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SJvhGIPo5r1_6xaDVYK6-2" value="Tienda_Cliente(&lt;u&gt;PK id_tienda_id_cliente&lt;/u&gt;)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SJvhGIPo5r1_6xaDVYK6-3" value="Cliente(&lt;u&gt;PK id_cliente,&lt;/u&gt;&amp;nbsp;nombre_cliente, apellido1, apellido2)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="670" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SJvhGIPo5r1_6xaDVYK6-4" value="Compra(&lt;u&gt;PK clave_producto_id_cliente,&lt;/u&gt;&amp;nbsp;fecha_compra)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="700" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SJvhGIPo5r1_6xaDVYK6-5" value="Producto(&lt;u&gt;PK clave_producto,&lt;/u&gt;&amp;nbsp;nombre_producto, precio_producto)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="730" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SJvhGIPo5r1_6xaDVYK6-6" value="Tienda_Producto(&lt;u&gt;PK id_tienda_clave_producto&lt;/u&gt;)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="760" width="280" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
