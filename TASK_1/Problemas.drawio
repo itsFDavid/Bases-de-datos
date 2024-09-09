@@ -2313,6 +2313,21 @@
         <mxCell id="0EmZ20iGR1WNN788727n-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="e23Lo_1kPeYPqXO8XWi9-2" target="A-QzMAEhVetzy2Jgnjex-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="mLzhaPBobak_rq5vNuIP-1" value="Hospital(&lt;u&gt;PK id_hospital&lt;/u&gt;, nombre_hospital, municipio, calle, colonia, CP)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="850" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MOiBahuJ0A03x4esvOql-1" value="Hospital_Paciente(&lt;u&gt;PK id_hospital_id_paciente&lt;/u&gt;)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="880" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YZer1RrAlIJtwvFG87rs-1" value="Paciente(&lt;u&gt;PK id_paciente,&lt;/u&gt; nombre_paciente, apellido1, apellido2, fecha_nacimiento, altura, grupo_sanguineo, peso)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="910" width="640" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YZer1RrAlIJtwvFG87rs-2" value="Consulta(&lt;u&gt;PK id_consulta&lt;/u&gt;, tipo_consulta, fecha_consulta, FK id_paciente, FK id_medico, FK id_hospital)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="940" width="570" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YZer1RrAlIJtwvFG87rs-3" value="Medico(&lt;u&gt;PK id_medico,&lt;/u&gt; nombre_medico, apellido1, apellido2, especialidad, RFC, FK id_hospital)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="970" width="530" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
