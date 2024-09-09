@@ -1458,7 +1458,7 @@
             <mxPoint x="324" y="165" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kW00nmTteHUETkMFSVD--55" value="Empleado_proyecto" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
+        <mxCell id="kW00nmTteHUETkMFSVD--55" value="Empleado_Proyecto" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="460" y="400" width="200" height="90" as="geometry" />
         </mxCell>
         <mxCell id="kW00nmTteHUETkMFSVD--56" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="kW00nmTteHUETkMFSVD--55">
@@ -1509,6 +1509,18 @@
               <mxPoint x="120" y="535" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="zbT2Fbc-iZaE6KJWeKcb-1" value="Empresa(&lt;u&gt;PK id_empresa&lt;/u&gt;, nombre_empresa, municipio, calle, colonia, CP)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="610" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zbT2Fbc-iZaE6KJWeKcb-2" value="Proyecto(&lt;u&gt;PK id_proyecto&lt;/u&gt;, nombre_proyecto, fecha_entrega, FK id_empresa)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zbT2Fbc-iZaE6KJWeKcb-3" value="Empleado_Proyecto(&lt;u&gt;PK id_empleado_id_proyecto&lt;/u&gt;, fecha_inicio)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="670" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ta43HgCo4CVhBWqPRoit-1" value="Empleado(&lt;u&gt;PK id_empleado,&lt;/u&gt; nombre_empleado, apellido1, apellido2, RFC, FK id_empresa )" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="700" width="510" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
