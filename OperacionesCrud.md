@@ -121,5 +121,22 @@ SELECT Email FROM Usuarios WHERE LENGTH(Password) > 8;
 SELECT Email FROM Usuarios WHERE MOD(Id_usuario, 2) = 0;
 ```
 
+## UPDATE
+---
+La operacion actualizar se utiliza para ***modificar registros existentes en la base de datos***. Esto se hace con la sentencia: 
 
+`UPDATE`
 
+Especificamos que datos cambiar y alicamos condiciones para identificar los registros a actualizar 
+
+```sql
+-- Ejemplo para actualizar la Password de de un Usuario por su I
+UPDATE Usuarios SET Password="124324532f" WHERE Id_usuario = 52;
+
+-- Ejemplo para actualizar el Email y Password de un usuario especifico
+UPDATE Usuario SET Email="prueba@gmail.com", Password="kjncdibcd" WHERE Id_usuario=52;
+
+```
+
+**Ejercicio:**
+Intenta actualizar registros con valores que violen las restricciones
