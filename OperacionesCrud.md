@@ -63,6 +63,22 @@ INSERT Usuarios (Email, Password) VALUES (
     "error1",
     "12345678"
 );
+-- contraseña menor a 8 caracteres
+INSERT Usuarios (Email, Password)  VALUES (
+    "FDavid04@icloud.com",
+    "1234567"
+);
+-- Contraseña mayor a 15 caracteres
+INSERT Usuarios (Email, Password)  VALUES (
+    "FDavid03@icloud.com",
+    "1234567891234567"
+);
+-- Email repetido
+INSERT Usuarios (Email, Password)  VALUES (
+    "FDavid04@icloud.com",
+    "123456789"
+);
+
 ```
 
 ## READ
