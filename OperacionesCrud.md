@@ -79,6 +79,13 @@ INSERT Usuarios (Email, Password)  VALUES (
     "123456789"
 );
 
+INSERT Usuarios (Email, Password) VALUES(
+    ("FDavid04@icloud.com", "123456789"),
+    ("FDavid03@icloud.com", "987654321"),
+    ("FDavid02@icloud.com", "135791234"),
+    ("FDavid01@icloud.com", "091234489")
+);
+
 ```
 
 ## READ
@@ -108,6 +115,11 @@ SELECT * FROM Usuarios WHERE LENGTH(Password) > 9;
 
 Realiza una consulta que muestre solo el Email que coincida con una contraseña de mas de 8 caracteres y otra que realize otra consulta a los Id´s pares
 
+```sql
+SELECT Email FROM Usuarios WHERE LENGTH(Password) > 8;
+
+SELECT Email FROM Usuarios WHERE MOD(Id_usuario, 2) = 0;
+```
 
 
 
