@@ -79,12 +79,12 @@ INSERT Usuarios (Email, Password)  VALUES (
     "123456789"
 );
 
-INSERT Usuarios (Email, Password) VALUES(
-    ("FDavid04@icloud.com", "123456789"),
-    ("FDavid03@icloud.com", "987654321"),
-    ("FDavid02@icloud.com", "135791234"),
-    ("FDavid01@icloud.com", "091234489")
-);
+INSERT INTO Usuarios VALUES
+    (DEFAULT, "FDavid04@icloud.com", "123456789"),
+    (DEFAULT, "FDavid03@icloud.com", "987654321"),
+    (DEFAULT, "FDavid02@icloud.com", "135791234"),
+    (DEFAULT, "FDavid01@icloud.com", "091234489")
+;
 
 ```
 
