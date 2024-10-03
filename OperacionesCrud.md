@@ -151,4 +151,44 @@ UPDATE Usuarios SET Password="123" WHERE Id_usuario=1;
 UPDATE Usuarios SET Password="1234567891233482793" WHERE Id_usuario=1;
 
 ```
+## DELETE
+La operacion *eliminar* ***se usa para borrar registros de la base de datos***. Esto se realiza con la sentencia:
 
+`DELETE`
+
+Debemos ser muy cuidadosos con esta operacion, ya que una vez que los datos son eliminados no pueden ser recuperados
+
+```sql
+-- Eliminar el usuario por el Id
+DELETE FROM Usuarios WHERE Id_usuario=1;
+
+-- Eliminar los usuarios con el Email especifico
+DELETE FROM Usuarios WHERE Email="ejemplo1@gmail.com";
+
+-- Eliminar todos los registros de la tlaba ES PELIGROSO, NO RECOMENDADO
+DELETE FROM Usuarios;
+
+-- Eliminar Usuarios cuya contraseña tenga menos de 10 caracteres
+DELETE FROM Usuarios WHERE LENGTH(Password) < 10;
+```
+
+**Ejercicios:**
+1. Eliminar usuarios cuyo email contenga uno 5 o mas 5
+2. Eliminar usuarios que tengan una contraseña que contenga letras mayusculas usando expresiones regulares
+3. Eliminar usuarios con contraseñas que contengan solo numeros
+4. Eliminar usuarios que no tengan el dominio "gmail"
+
+```sql
+-- 1
+DELETE FROM Usuarios WHERE Email REGEXP'[5]';
+
+-- 2
+DELETE FROM Usuarios WHERE Password REGEXP´[A-Z]´;
+
+-- 3
+DELETE FROM Usuarios WHERE Password REGEXP'[0-9]';
+
+-- 4
+DELETE FROM Usuarios HERE Email NOT LIKE "%_@gmail.%_";
+
+```
