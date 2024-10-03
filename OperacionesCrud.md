@@ -140,3 +140,15 @@ UPDATE Usuario SET Email="prueba@gmail.com", Password="kjncdibcd" WHERE Id_usuar
 
 **Ejercicio:**
 Intenta actualizar registros con valores que violen las restricciones
+
+```sql
+UPDATE Usuarios SET Email="ejemplo0@gmail.com" WHERE Id_usuario=1;
+
+UPDATE Usuarios SET Email="ejemplo0.gmail.com" WHERE Id_usuario=1;
+
+UPDATE Usuarios SET Password="123" WHERE Id_usuario=1;
+
+UPDATE Usuarios SET Password="1234567891233482793" WHERE Id_usuario=1;
+
+```
+
