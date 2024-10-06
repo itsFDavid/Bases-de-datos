@@ -190,5 +190,6 @@ DELETE FROM Usuarios WHERE Password REGEXP'[0-9]';
 
 -- 4
 DELETE FROM Usuarios HERE Email NOT LIKE "%_@gmail.%_";
-
+-- % is character
+-- _ is digit
 ```
