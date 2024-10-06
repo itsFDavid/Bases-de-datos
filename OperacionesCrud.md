@@ -54,8 +54,8 @@ INSERT Usuarios (Email, Password) VALUES (
 );
 ```
 
-### Ejercicio:
-Identifica los errores que pueden salir con esta tabla e inserta 4 registros nuevos en un solo insert
+`Ejercicio:`
+- Identifica los errores que pueden salir con esta tabla e inserta 4 registros nuevos en un solo insert
 
 ```sql
 --Error 1
@@ -111,7 +111,7 @@ SELECT * FROM Usuarios WHERE LENGTH(Password) > 9;
 
 ```
 
-**Ejercicio:**
+`Ejercicio:`
 
 Realiza una consulta que muestre solo el Email que coincida con una contraseña de mas de 8 caracteres y otra que realize otra consulta a los Id´s pares
 
@@ -138,7 +138,7 @@ UPDATE Usuario SET Email="prueba@gmail.com", Password="kjncdibcd" WHERE Id_usuar
 
 ```
 
-**Ejercicio:**
+`Ejercicio:`
 Intenta actualizar registros con valores que violen las restricciones
 
 ```sql
@@ -172,11 +172,11 @@ DELETE FROM Usuarios;
 DELETE FROM Usuarios WHERE LENGTH(Password) < 10;
 ```
 
-**Ejercicios:**
+`Ejercicios:`
 1. Eliminar usuarios cuyo email contenga uno 5 o mas 5
 2. Eliminar usuarios que tengan una contraseña que contenga letras mayusculas usando expresiones regulares
 3. Eliminar usuarios con contraseñas que contengan solo numeros
-4. Eliminar usuarios que no tengan el dominio "gmail"
+4. Eliminar usuarios que no tengan el dominio 'gmail'
 
 ```sql
 -- 1
