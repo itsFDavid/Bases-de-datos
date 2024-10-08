@@ -89,11 +89,11 @@ SELECT * FROM clientes;
 -- 2 
 SELECT nombre, email FROM clientes;
 -- 3
-SELECT * FROM clientes WHERE telefono REGEXP'[555]';
+SELECT * FROM clientes WHERE telefono LIKE '555%';
 -- 4 
-SELECT * FROM clientes WHERE nombre="López"
+SELECT * FROM clientes WHERE nombre LIKE '_López_';
 -- 5
-SELECT * FROM clientes 
+SELECT * FROM clientes ORDER BY nombre ASC;
 -- 6
 SELECT email FROM clientes WHERE MOD(id_cliente, 2) = 0;
 -- 7
@@ -111,6 +111,20 @@ SELECT * FROM clientes WHERE LENGTH(direccion) > 10;
 4. Actualiza la dirección de todos los clientes cuyos nombres contengan "López".
 
 5. Incrementa los `id_cliente` de todos los clientes en 10 (esto es solo un ejercicio teórico).
+
+**RESULTADOS:**
+```sql
+-- 1 
+UPDATE clientes SET telefono="9876543210" WHERE id_cliente=1;
+-- 2
+UPDATE clientes SET email="ejemplo8@gmail.com" WHERE id_cliente=1;
+-- 3
+UPDATE clientes SET email="ejemplo8@gmail.com" WHERE id_cliente=1;
+-- 4
+UPDATE clientes SET direccion="Nueva imaginaria" WHERE nombre LIKE "_López_";
+
+UPDATE clientes SET id_cliente=id_cliente+10;
+```
 
 ## Ejercicios DELETE
 
