@@ -91,7 +91,7 @@ SELECT nombre, email FROM clientes;
 -- 3
 SELECT * FROM clientes WHERE telefono LIKE '555%';
 -- 4 
-SELECT * FROM clientes WHERE nombre LIKE '_López_';
+SELECT * FROM clientes WHERE nombre LIKE '%López%';
 -- 5
 SELECT * FROM clientes ORDER BY nombre ASC;
 -- 6
@@ -121,7 +121,7 @@ UPDATE clientes SET email="ejemplo8@gmail.com" WHERE id_cliente=1;
 -- 3
 UPDATE clientes SET email="ejemplo8@gmail.com" WHERE id_cliente=1;
 -- 4
-UPDATE clientes SET direccion="Nueva imaginaria" WHERE nombre LIKE "_López_";
+UPDATE clientes SET direccion="Nueva imaginaria" WHERE nombre LIKE "%López%";
 
 UPDATE clientes SET id_cliente=id_cliente+10;
 ```
