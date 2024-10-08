@@ -82,6 +82,24 @@ INSERT INTO clientes VALUES (
 
 7. Consulta los clientes con direcciones que contengan más de 10 caracteres.
 
+**RESULTADOS:**
+```sql
+-- 1
+SELECT * FROM clientes;
+-- 2 
+SELECT nombre, email FROM clientes;
+-- 3
+SELECT * FROM clientes WHERE telefono REGEXP'[555]';
+-- 4 
+SELECT * FROM clientes WHERE nombre="López"
+-- 5
+SELECT * FROM clientes 
+-- 6
+SELECT email FROM clientes WHERE MOD(id_cliente, 2) = 0;
+-- 7
+SELECT * FROM clientes WHERE LENGTH(direccion) > 10;
+```
+
 ## Ejercicios UPDATE
 
 1. Actualiza el número de teléfono de un cliente específico.
