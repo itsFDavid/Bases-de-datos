@@ -26,9 +26,45 @@ CREATE TABLE clientes (
 
 **RESULTADOS:**
 ```sql
--- 1.-
-INSERT INTO clientes
-
+-- 1
+INSERT INTO clientes (
+    id_cliente,
+    nombre, email,
+    telefono, direccion
+)VALUES (
+    DEFAULT, "Francisco",
+    "FDavid@icloud.com",
+    "1122334455",
+    "Imaginaria"
+);
+-- 2
+INSERT INTO clientes (
+    nombre, email,
+    telefono, direccion
+) VALUES ("Francisco",
+    "FDavid@icloud.com",
+    "1122334455",
+    "Imaginaria");
+-- 3
+INSERT INTO clientes (
+    nombre, email,
+    telefono, direccion
+) VALUES ("Francisco",
+    "FDavid@icloud",
+    "1122334455",
+    "Imaginaria");
+-- 4
+INSERT INTO clientes VALUES (
+    ("Francisco", "ejemplo1@icloud.com", "1122334455", "Imaginaria"),
+    ("Francisco", "ejemplo2@icloud.com", "1122334455", "Imaginaria"),
+    ("Francisco", "ejemplo3@icloud.com", "1122334455", "Imaginaria"),
+    ("Francisco", "ejemplo4@icloud.com", "1122334455", "Imaginaria"),
+    ("Francisco", "ejemplo5@icloud.com", "1122334455", "Imaginaria")
+);
+-- 5
+INSERT INTO clientes VALUES (
+    "Francisco", "ejemplo1@icloud.com", "12345678", "Imaginaria"
+);
 ```
 ## Ejercicios READ
 
