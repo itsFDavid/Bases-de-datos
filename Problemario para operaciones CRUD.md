@@ -138,4 +138,15 @@ UPDATE clientes SET id_cliente=id_cliente+10;
 
 5. Elimina todos los registros de la tabla `clientes` (¡CUIDADO!).
 
+**RESULTADOS:**
+```sql
+-- 1
+DELETE FROM clientes WHERE id_cliente=1;
+-- 2 
+DELETE FROM clientes WHERE telefeno LIKE '555%';
+-- 3
+DELETE FROM clientes WHERE LENGTH(direccion) < 10;
+-- 4
+DELETE FROM clientes;
 
+```
