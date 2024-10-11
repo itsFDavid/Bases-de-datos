@@ -65,6 +65,13 @@ CREATE TABLE detalle_pedidos (
 2. **Registra 3 clientes en la tabla `clientes`.**  
    
    *Instrucción:* Ingresa datos de nombre y correo para cada cliente. Asegúrate de que los correos sean únicos.
+   ```sql
+   INSERT clientes VALUES(
+      (DEFAULT, "Francisco", "ejemplo1@gmail.com"),
+      (DEFAULT, "Jose", "ejemplo2@gmail.com"),
+      (DEFAULT, "Antonio", "ejemplo3@gmail.com")
+   );
+   ```
 
 3. **Inserta 2 pedidos hechos por diferentes clientes.**  
    
