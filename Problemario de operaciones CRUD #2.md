@@ -76,6 +76,18 @@ CREATE TABLE detalle_pedidos (
 3. **Inserta 2 pedidos hechos por diferentes clientes.**  
    
    *Instrucción:* Cada pedido debe tener al menos 2 productos, especifica la cantidad y el precio unitario de cada uno.
+   ```sql
+   INSERT INTO pedidos (cliente_id, total) VALUES (
+      (1, 65.0),
+      (2, 36.0)
+   );
+
+   INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, precio_unitario) VALUES (
+      (1, 1, 2, 20.0),
+      (1, 2, 1, 25.0),
+      (2, 3, 2, 18.0)
+   );
+   ```
 
 ## Ejercicios READ
 
