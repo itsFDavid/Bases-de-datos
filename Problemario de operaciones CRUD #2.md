@@ -94,15 +94,28 @@ CREATE TABLE detalle_pedidos (
 1. **Obtén una lista de todos los productos que tienen un stock mayor a 10 unidades.**  
    
    *Instrucción:* Muestra el `producto_id`, `nombre`, `precio` y `stock`.
+   ```sql
+   SELECT producto_id, nombre, precio, stock FROM productos WHERE stock > 10;
+   ```
 
 2. **Encuentra los pedidos realizados por un cliente en particular.** 
    
    *Instrucción:* Muestra el `nombre` del cliente, `pedido_id`, `fecha_pedido` y el `total`.
-
+   ```sql
+   SELECT clientes.nombre, pedidos.pedido_id, pedidos.fecha_pedido, pedidos.total
+   FROM pedidos
+   JOIN clientes ON pedidos.cliente_id = clientes.cliente_id
+   WHERE clientes.nombre = 'Francisco';
+   ```
 3. **Muestra el total de ventas por cada producto.**  
    
    *Instrucción:* Agrupa por `producto_id` y muestra el `nombre` del producto y la cantidad total vendida en todos los pedidos.
-
+   ```sql
+   SELECT productos.nombre, SUM(detalle_pedidos.cantidad) AS total_vendido
+   FROM detalle_pedidos
+   JOIN productos ON detalle_pedidos.producto_id = productos.producto_id
+   GROUP BY productos.producto_id;
+   ```
 ## Ejercicios UPDATE
 
 1. **Actualiza el precio de todos los productos de una categoria aumentando un 15%.**  
