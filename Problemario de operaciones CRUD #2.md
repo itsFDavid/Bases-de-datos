@@ -121,13 +121,20 @@ CREATE TABLE detalle_pedidos (
 1. **Actualiza el precio de todos los productos de una categoria aumentando un 15%.**  
    
    *Instrucción:* Usa la columna `categoria` para filtrar los productos.
-
+   ```sql
+   UPDATE productos SET precio = precio * 1.15 WHERE categoria = 'Panecillo';
+   ```
 2. **Modifica el correo de uno de los clientes por un nuevo correo electrónico.**
    
    *Instrucción:* Asegúrate de que el nuevo correo sea único.
-
+   ```sql
+   UPDATE clientes SET correo = 'nuevo_correo@gmail.com' WHERE cliente_id = 1;
+   ```
 3. **Corrige el stock de un producto cuyo stock actual es incorrecto.** 
    *Instrucción:* Busca el producto por su `producto_id` y actualiza el campo `stock`.
+   ```sql
+   UPDATE productos SET stock=30 WHERE producto_id=1;
+   ```
 
 ## Ejercicos DELETE
 
