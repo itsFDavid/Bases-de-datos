@@ -141,14 +141,36 @@ CREATE TABLE detalle_pedidos (
 1. **Elimina todos los productos de la tabla `productos` que no tienen stock disponible.** 
    
    *Instrucción:* Debes usar la columna `stock` para identificar productos con stock igual a 0.
+   ```sql
+   DELETE FROM productos WHERE stock = 0;
+   ```
 
 2. **Borra un pedido que fue cancelado por el cliente.** 
    
    *Instrucción:* Elimina el pedido junto con todos los registros relacionados en la tabla `detalle_pedidos`.
+   ```sql
+   -- ya que la entidad de detalles es debil por que depende de
+   -- la entidad productos esta la debemos eliminar primero, si no, no se podria
+   DELETE FROM detalle_pedidos WHERE pedido_id = 1;
+
+   -- ahora si seguimos con la de prodcutos
+   DELETE FROM pedidos WHERE pedido_id = 1;
+   ```
 
 3. **Elimina un cliente que ha solicitado la eliminación de su cuenta.**
    
    *Instrucción:* Asegúrate de borrar primero los registros relacionados en la tabla `pedidos` y luego el cliente de la tabla `clientes`.
+   ```sql
+   -- Primero eliminamos los detalles de los pedidos del cliente por la entidad debil
+   DELETE FROM detalle_pedidos WHERE pedido_id IN (SELECT pedido_id FROM pedidos WHERE cliente_id = 1);
+   
+   -- Luego eliminamos los pedidos del cliente, esta es entidad fuerte de detalles pedidos
+   -- pero entidad debil de cliente
+   DELETE FROM pedidos WHERE cliente_id = 1;
+   
+   -- ahora si eliminamos al cliente
+   DELETE FROM clientes WHERE cliente_id = 1; 
+   ```
 
 
 
