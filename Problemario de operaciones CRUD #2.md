@@ -77,11 +77,12 @@ CREATE TABLE detalle_pedidos (
    
    *Instrucción:* Cada pedido debe tener al menos 2 productos, especifica la cantidad y el precio unitario de cada uno.
    ```sql
+   -- entidad fuerte, pedido
    INSERT INTO pedidos (cliente_id, total) VALUES (
       (1, 65.0),
       (2, 36.0)
    );
-
+   -- entidad debil, detalle_pedidos depende de pedidos
    INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, precio_unitario) VALUES (
       (1, 1, 2, 20.0),
       (1, 2, 1, 25.0),
