@@ -112,6 +112,7 @@ CREATE TABLE detalle_pedidos (
    
    *Instrucción:* Agrupa por `producto_id` y muestra el `nombre` del producto y la cantidad total vendida en todos los pedidos.
    ```sql
+   -- aqui especifio de que tabla voy a sacar los datos, ya que se usan varias
    SELECT productos.nombre, SUM(detalle_pedidos.cantidad) AS total_vendido
    FROM detalle_pedidos
    JOIN productos ON detalle_pedidos.producto_id = productos.producto_id
@@ -123,6 +124,7 @@ CREATE TABLE detalle_pedidos (
    
    *Instrucción:* Usa la columna `categoria` para filtrar los productos.
    ```sql
+   -- use el 1.15 ya que asi me devuelve el valor y no el porcentaje a sumar
    UPDATE productos SET precio = precio * 1.15 WHERE categoria = 'Panecillo';
    ```
 2. **Modifica el correo de uno de los clientes por un nuevo correo electrónico.**
