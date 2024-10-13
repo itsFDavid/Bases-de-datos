@@ -131,6 +131,7 @@ CREATE TABLE detalle_pedidos (
    
    *Instrucción:* Asegúrate de que el nuevo correo sea único.
    ```sql
+   -- este correo no existe
    UPDATE clientes SET correo = 'nuevo_correo@gmail.com' WHERE cliente_id = 1;
    ```
 3. **Corrige el stock de un producto cuyo stock actual es incorrecto.** 
