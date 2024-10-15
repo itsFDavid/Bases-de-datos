@@ -204,3 +204,106 @@ SELECT YEAR(NOW()) AS año_actual;
 ```sql
 SELECT DATEDIFF('2024-12-25', NOW()) AS dias_para_navidad;
 ```
+
+## Ejercicios:
+1. Calcular el salario promedio de los empleados
+
+**Enunciado:**
+
+- Queremos saber cuál es el salario promedio de los empleados en la empresa.
+Calcula este valor utilizando una función agregada adecuada.
+
+```sql
+SELECT AVG(salary) AS promedio_sueldo FROM empleados;
+```
+2. Contar el número de empleados en cada departamento
+
+**Enunciado:** 
+
+- Deseamos saber cuántos empleados trabajan en cada departamento. Para ello, necesitas agrupar a los empleados por departamento y contar cuántos hay en cada uno.
+
+```sql
+SELECT department, COUNT(department) AS departement_emple FROM empleados GROUP BY department;
+```
+3. Encontrar el salario más alto y más bajo
+
+**Enunciado:**
+
+- La gerencia quiere conocer el salario más alto y el salario más bajo entre todos los
+empleados.
+```sql
+-- Minimo
+SELECT MIN(salary) AS salario_minimo FROM empleados;
+-- Maximo
+SELECT MAX(salary) AS salario_maximo FROM empleados;
+```
+4. Convertir los nombres de los empleados a mayúsculas
+
+**Enunciado:**
+
+- Se necesita una lista de todos los nombres de empleados convertidos a mayúsculas.
+
+```sql
+SELECT UCASE(nombre) AS nombre_mayusculas FROM empleados;
+```
+5. Obtener la longitud de los nombres de los empleados
+
+**Enunciado:**
+
+- Queremos saber la longitud (número de caracteres) de los nombres de todos los empleados.
+
+```sql
+SELECT nombre, LENGTH(nombre) as longitud_nombre FROM empleados;
+```
+6. Extraer las primeras tres letras de cada nombre
+
+**Enunciado:**
+
+- Para un análisis de iniciales, necesitamos extraer las primeras tres letras del nombre de cada empleado.
+
+```sql
+SELECT MID(nombre, 1, 3) AS iniciales FROM empleados;
+```
+
+7. Formatear los salarios a dos decimales
+
+**Enunciado**:
+
+- Queremos mostrar los salarios de los empleados formateados con dos decimales de manera clara y legible.
+
+```sql
+SELECT FORMAT(salary, 2) AS salario_formateado FROM empleados;
+```
+
+8. Obtener la fecha actual y calcular el tiempo desde el ingreso
+
+**Enunciado:**
+
+- Queremos saber cuánto tiempo ha pasado (en días) desde que cada empleado ingresó a la empresa hasta la fecha actual.
+
+```sql
+SELECT DATE(NOW()) AS fecha_actual;
+
+SELECT DATEDIFF(NOW(), fecha_ingreso) AS tiempo_dias_desde_ingreso FROM empleados;
+```
+
+9. Contar cuántos empleados tienen su nombre más largo de 10 caracteres
+
+**Enunciado:**
+
+- Necesitamos contar cuántos empleados tienen un nombre con más de 10 caracteres.
+
+```sql
+SELECT COUNT(nombre) AS nombre_mas_10_caracteres FROM empleados WHERE LENGTH(nombre) > 10;
+```
+
+10. Filtrar empleados que ingresaron hace más de 5 años
+
+**Enunciado**
+
+- Queremos obtener una lista de empleados que hayan ingresado hace más de 5 años.
+
+```sql
+SELECT nombre AS empleado_con_mas_5_anios FROM empleados WHERE DATEDIFF(NOW(), fecha_ingreso) > (365 * 5);
+```
+
