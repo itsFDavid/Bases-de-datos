@@ -53,24 +53,23 @@ CREATE TABLE detalle_pedidos (
    
    *Instrucción:* Los productos deben incluir un nombre, categoría, precio y stock inicial.
    ```sql
-   INSERT productos VALUES (
-      (DEFAULT, "Gansito", "Panecillo", 20.0, 10),
-      (DEFAULT, "Pingüinos", "Panecillo", 25.0, 20),
-      (DEFAULT, "Doritos Dinamita", "Frituras", 18.0, 40),
-      (DEFAULT, "Sabritas Naturales", "Frituras", 18.0, 20),
-      (DEFAULT, "Takis", "Frituras", 20.0, 20)
-   );
+   INSERT productos (nombre, categoria, precio, stock) 
+   VALUES 
+      ("Gansito", "Panecillo", 20.0, 10),
+      ("Pingüinos", "Panecillo", 25.0, 20),
+      ("Doritos Dinamita", "Frituras", 18.0, 40),
+      ("Sabritas Naturales", "Frituras", 18.0, 20),
+      ("Takis", "Frituras", 20.0, 20);
    ```
 
 2. **Registra 3 clientes en la tabla `clientes`.**  
    
    *Instrucción:* Ingresa datos de nombre y correo para cada cliente. Asegúrate de que los correos sean únicos.
    ```sql
-   INSERT clientes VALUES(
-      (DEFAULT, "Francisco", "ejemplo1@gmail.com"),
-      (DEFAULT, "Jose", "ejemplo2@gmail.com"),
-      (DEFAULT, "Antonio", "ejemplo3@gmail.com")
-   );
+   INSERT INTO clientes (nombre, correo)VALUES
+      ("Francisco", "ejemplo1@gmail.com"),
+      ("Jose", "ejemplo2@gmail.com"),
+      ("Antonio", "ejemplo3@gmail.com");
    ```
 
 3. **Inserta 2 pedidos hechos por diferentes clientes.**  
@@ -78,16 +77,14 @@ CREATE TABLE detalle_pedidos (
    *Instrucción:* Cada pedido debe tener al menos 2 productos, especifica la cantidad y el precio unitario de cada uno.
    ```sql
    -- entidad fuerte, pedido
-   INSERT INTO pedidos (cliente_id, total) VALUES (
+   INSERT INTO pedidos (cliente_id, total) VALUES 
       (1, 65.0),
-      (2, 36.0)
-   );
+      (2, 36.0);
    -- entidad debil, detalle_pedidos depende de pedidos
-   INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, precio_unitario) VALUES (
+   INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, precio_unitario) VALUES 
       (1, 1, 2, 20.0),
       (1, 2, 1, 25.0),
-      (2, 3, 2, 18.0)
-   );
+      (2, 3, 2, 18.0);
    ```
 
 ## Ejercicios READ
@@ -135,6 +132,7 @@ CREATE TABLE detalle_pedidos (
    UPDATE clientes SET correo = 'nuevo_correo@gmail.com' WHERE cliente_id = 1;
    ```
 3. **Corrige el stock de un producto cuyo stock actual es incorrecto.** 
+   
    *Instrucción:* Busca el producto por su `producto_id` y actualiza el campo `stock`.
    ```sql
    UPDATE productos SET stock=30 WHERE producto_id=1;
