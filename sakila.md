@@ -30,11 +30,16 @@ NOT IN: No esta dentro de la lista (TRUE)
 ### Consulta 3
 **Encuentra a los clientes que no han realizado ningun alquiler en los ultimos 30 dias**
 ```sql
- SELECT customer_id FROM rental WHERE DATEDIFF(NOW(), rental_date) > 30; 
+SELECT customer_id FROM rental WHERE DATEDIFF(NOW(), rental_date) > 30; 
 
 SELECT first_name, last_name FROM customer WHERE customer_id IN (SELECT customer_id FROM rental WHERE DATEDIFF(NOW(), rental_date) > 30);
 ```
 
+### Consulta 4
+**Muestra los nombres de los actores y los titulos de las peliculas en las que han participado**
+```sql
+
+```
 
 
 
