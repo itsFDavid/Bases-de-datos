@@ -38,7 +38,10 @@ SELECT first_name, last_name FROM customer WHERE customer_id IN (SELECT customer
 ### Consulta 4
 **Muestra los nombres de los actores y los titulos de las peliculas en las que han participado**
 ```sql
-
+SELECT actor.first_name, actor.last_name, film.title
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id;
 ```
 
 
