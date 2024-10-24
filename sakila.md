@@ -44,5 +44,18 @@ JOIN film_actor ON actor.actor_id = film_actor.actor_id
 JOIN film ON film_actor.film_id = film.film_id;
 ```
 
+### Consulta 5
+**Ver las veces que se rento una pelicula**
+```sql
+SELECT f.title, COUNT(r.rental_id) AS rental_count FROM film AS f
+LEFT JOIN  inventory AS i ON f.film_id = i.film_id
+LEFT JOIN rental AS r ON i.inventory_id = r.inventory_id
+GROUP BY f.title;
+```
 
+### Operaciones de union
+**Union**
+```sql
+SELECT first_name FROM actor UNION SELECT first_name FROM customer;
+```
 
