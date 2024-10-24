@@ -68,4 +68,7 @@ SELECT first_name FROM actor UNION ALL SELECT first_name FROM customer;
 ```sql
 SELECT first_name FROM actor INTERSECT SELECT first_name FROM customer;
 ```
-
+**Excepcion**
+```sql
+SELECT first_name FROM actor EXCEPT SELECT first_name FROM customer;
+```
