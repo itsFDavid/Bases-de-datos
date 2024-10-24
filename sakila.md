@@ -59,3 +59,13 @@ GROUP BY f.title;
 SELECT first_name FROM actor UNION SELECT first_name FROM customer;
 ```
 
+**Union All**
+```sql
+SELECT first_name FROM actor UNION ALL SELECT first_name FROM customer;
+```
+
+**Interseccion**
+```sql
+SELECT first_name FROM actor INTERSECT SELECT first_name FROM customer;
+```
+
