@@ -72,3 +72,7 @@ SELECT first_name FROM actor INTERSECT SELECT first_name FROM customer;
 ```sql
 SELECT first_name FROM actor EXCEPT SELECT first_name FROM customer;
 ```
+
+### Tarea
+
+**Devuelve las ciudades donde viven los clientes o empleados sin duplicados**
