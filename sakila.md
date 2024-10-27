@@ -76,3 +76,8 @@ SELECT first_name FROM actor EXCEPT SELECT first_name FROM customer;
 ### Tarea
 
 **Devuelve las ciudades donde viven los clientes o empleados sin duplicados**
+```sql
+SELECT DISTINCT city FROM city 
+INNER JOIN address ON  city.city_id = address.city_id
+INNER JOIN customer ON address.address_id = customer.address_id;
+```
