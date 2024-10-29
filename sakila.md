@@ -109,4 +109,25 @@ INNER JOIN customer ON address.address_id = customer.address_id;
 SELECT DISTINCT city FROM city 
 INNER JOIN address ON city.city_id = address.city_id
 INNER JOIN staff ON address.address_id = staff.address_id;
+
+-- Con subconsultas
+SELECT city_id, city FROM city WHERE city_id 
+IN (SELECT city_id FROM address WHERE address_id 
+IN (SELECT address_id FROM customer));
+```
+
+
+### Crear Vistas
+
+```sql
+CREATE VIEW prueba AS 
+SELECT first_name, last_name FROM actor WHERE YEAR(last_update) > 2012;
+
+-- Se seleccionan los valores dentro de la vista como si fuera una tabla
+SELECT * FROM prueba;
+```
+
+**Insertar un valor y verlo en la vista, se inserta automaticamente**
+```sql
+INSERT actor VALUES (DEFAULT, "Lucio", "Hernandez", NOW());
 ```
