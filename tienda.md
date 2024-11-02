@@ -42,3 +42,24 @@ JOIN store ON card_points.id_store = store.id_store;
 
 SELECT * FROM transacciones_tarjetas; 
 ```
+
+`Ejercicio 3:`
+
+Crea una vista que muestre el id del cliente, el telefono, la tienda a la que pertenece
+la tarjeta de puntos y la cantidad de puntos acumulados en essa tienda
+
+
+```sql
+CREATE VIEW vistas_clientes_puntos_tienda AS
+SELECT 
+    client.id_client AS id_cliente,
+    client.phone AS telefono,
+    store.name AS nombre_tienda,
+    card_points.id_card AS id_tarjeta,
+    card_points.point AS puntos_acumulados
+FROM client
+JOIN card_points ON client.id_client = card_points.id_client
+JOIN store ON card_points.id_store = store.id_store;
+
+SELECT * FROM vistas_clientes_puntos_tienda;
+```
