@@ -127,7 +127,7 @@ SELECT first_name, last_name FROM actor WHERE YEAR(last_update) > 2012;
 SELECT * FROM prueba;
 ```
 
-**Insertar un valor y verlo en la vista, se inserta automaticamente**
+**Insertar un valor y verlo en la vista, se inserta automaticamente en la vista**
 ```sql
 INSERT actor VALUES (DEFAULT, "Lucio", "Hernandez", NOW());
 ```
