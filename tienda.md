@@ -1,6 +1,6 @@
-# Vistas
+# Vistas en MySQL
 
-En este arcivho utilizamos esta base de datos: [tienda](tienda.sql) para realizar las consultas y creacion de vistas
+En este documento utilizamos esta base de datos: [tienda](tienda.sql) para practicar consultas y la creacion de vistas en MySQL
 
 ---
 
