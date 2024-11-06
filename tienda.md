@@ -13,7 +13,11 @@ Crea una vista que muestre los detalles de los administradores y las tiendas que
 ```sql
 CREATE VIEW details_admin AS
 SELECT admin.username AS administrador, 
-user.username AS usuario, store.name AS tienda, admin.status AS status_admin, store.status AS status_tienda, user.status AS status_user
+user.username AS usuario, 
+store.name AS tienda, 
+admin.status AS status_admin, 
+store.status AS status_tienda, 
+user.status AS status_user
 FROM admin 
 INNER JOIN store ON store.id_admin = admin.id_admin
 INNER JOIN user ON store.id_store = user.id_store;
