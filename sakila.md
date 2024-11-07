@@ -24,13 +24,22 @@ SELECT * FROM category WHERE name = "Comedy";
 SELECT * FROM film_category WHERE category_id = 5;
 
 -- Encuentra los IDs de películas en la categoría 'Comedy'
-SELECT film_id FROM film_category WHERE category_id = (SELECT category_id FROM category WHERE name = "Comedy");
+SELECT film_id FROM film_category 
+WHERE category_id = (SELECT category_id FROM category 
+WHERE name = "Comedy");
 
 -- Encuentra los actores en películas de la categoría 'Comedy'
-SELECT actor_id FROM film_actor WHERE film_id IN (SELECT film_id FROM film_category WHERE category_id = (SELECT category_id FROM category WHERE name = "Comedy"));
+SELECT actor_id FROM film_actor 
+WHERE film_id IN (SELECT film_id FROM film_category 
+WHERE category_id = (SELECT category_id FROM category 
+WHERE name = "Comedy"));
 
 -- Muestra nombres de los actores en películas de comedia
-SELECT first_name, last_name FROM actor WHERE actor_id IN (SELECT actor_id FROM film_actor WHERE film_id IN (SELECT film_id FROM film_category WHERE category_id = (SELECT category_id FROM category WHERE name = "Comedy")));
+SELECT first_name, last_name FROM actor 
+WHERE actor_id IN (SELECT actor_id FROM film_actor 
+WHERE film_id IN (SELECT film_id FROM film_category 
+WHERE category_id = (SELECT category_id FROM category 
+WHERE name = "Comedy")));
 ```
 
 **Nota:**  
