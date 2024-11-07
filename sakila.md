@@ -42,9 +42,12 @@ SELECT first_name, last_name FROM actor WHERE actor_id IN (SELECT actor_id FROM 
 **Encuentra a los clientes que no han realizado ningún alquiler en los últimos 30 días.**
 
 ```sql
-SELECT customer_id FROM rental WHERE DATEDIFF(NOW(), rental_date) > 30; 
+SELECT customer_id FROM rental 
+WHERE DATEDIFF(NOW(), rental_date) > 30; 
 
-SELECT first_name, last_name FROM customer WHERE customer_id IN (SELECT customer_id FROM rental WHERE DATEDIFF(NOW(), rental_date) > 30);
+SELECT first_name, last_name FROM customer 
+WHERE customer_id IN (SELECT customer_id FROM rental 
+WHERE DATEDIFF(NOW(), rental_date) > 30);
 ```
 
 ### Consulta 4: Actores y Películas
@@ -63,7 +66,8 @@ JOIN film ON film_actor.film_id = film.film_id;
 **Ver las veces que se rentó una película.**
 
 ```sql
-SELECT f.title, COUNT(r.rental_id) AS rental_count FROM film AS f
+SELECT f.title, COUNT(r.rental_id) AS rental_count 
+FROM film AS f
 LEFT JOIN inventory AS i ON f.film_id = i.film_id
 LEFT JOIN rental AS r ON i.inventory_id = r.inventory_id
 GROUP BY f.title;
@@ -74,25 +78,29 @@ GROUP BY f.title;
 **Unión**
 
 ```sql
-SELECT first_name FROM actor UNION SELECT first_name FROM customer;
+SELECT first_name FROM actor 
+UNION SELECT first_name FROM customer;
 ```
 
 **Unión Todo**
 
 ```sql
-SELECT first_name FROM actor UNION ALL SELECT first_name FROM customer;
+SELECT first_name FROM actor 
+UNION ALL SELECT first_name FROM customer;
 ```
 
 **Intersección**
 
 ```sql
-SELECT first_name FROM actor INTERSECT SELECT first_name FROM customer;
+SELECT first_name FROM actor 
+INTERSECT SELECT first_name FROM customer;
 ```
 
 **Excepción**
 
 ```sql
-SELECT first_name FROM actor EXCEPT SELECT first_name FROM customer;
+SELECT first_name FROM actor 
+EXCEPT SELECT first_name FROM customer;
 ```
 
 ### Tarea
@@ -111,7 +119,8 @@ INNER JOIN address ON city.city_id = address.city_id
 INNER JOIN staff ON address.address_id = staff.address_id;
 
 -- Con subconsultas
-SELECT city_id, city FROM city WHERE city_id 
+SELECT city_id, city FROM city 
+WHERE city_id 
 IN (SELECT city_id FROM address WHERE address_id 
 IN (SELECT address_id FROM customer));
 ```
@@ -121,7 +130,8 @@ IN (SELECT address_id FROM customer));
 
 ```sql
 CREATE VIEW prueba AS 
-SELECT first_name, last_name FROM actor WHERE YEAR(last_update) > 2012;
+SELECT first_name, last_name FROM actor 
+WHERE YEAR(last_update) > 2012;
 
 -- Se seleccionan los valores dentro de la vista como si fuera una tabla
 SELECT * FROM prueba;
