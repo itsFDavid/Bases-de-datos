@@ -56,5 +56,7 @@ FLUSH PRIVILEGES;
 - **El usuario admin_db tiene privilegios para crear y eliminar bases de datos**
 - **Usando el comando adecuado, verifica los privilegios asignados al usuario admin_db en el servidor MySQL**
 
-
+```sql
+SHOW GRANTS FOR "admin_db"@"localhost";
+```
 
