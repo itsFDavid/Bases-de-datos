@@ -21,6 +21,11 @@ REVOKE UPDATE, DELETE ON empresa_db.* FROM "empleado"@"localhost";
 - **El usuario empleado anteriormente tenia permisos de solo lectura sobre la base de datos de empresa_db**
 - **Ahora, revoca el privilegio `SELECT` al usuario empleado y asigna el privilegio `INSERT` para que pueda agregar datos a las tablas de empresa_db**
 
+```sql
+REVOKE SELECT ON empresa_db.* FROM "empleado"@"localhost";
+
+GRANT INSERT ON empresa_db.* TO "empleado"@"localhost";
+```
 
 ## Ejercicio 3: Asignar privilegios globales
 
