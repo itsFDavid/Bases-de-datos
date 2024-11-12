@@ -12,7 +12,11 @@ CREATE USER "empleado"@"localhost" IDENTIFIED BY "empleado123";
 
 GRANT SELECT ON empresa_db.* TO "empleado"@"localhost";
 
+FLUSH PRIVILEGES;
+
 REVOKE UPDATE, DELETE ON empresa_db.* FROM "empleado"@"localhost";
+
+FLUSH PRIVILEGES;
 ```
 
 
@@ -25,6 +29,8 @@ REVOKE UPDATE, DELETE ON empresa_db.* FROM "empleado"@"localhost";
 REVOKE SELECT ON empresa_db.* FROM "empleado"@"localhost";
 
 GRANT INSERT ON empresa_db.* TO "empleado"@"localhost";
+
+FLUSH PRIVILEGES;
 ```
 
 ## Ejercicio 3: Asignar privilegios globales
@@ -32,8 +38,23 @@ GRANT INSERT ON empresa_db.* TO "empleado"@"localhost";
 - **Crea un usuario llamado admin_db con la contraseña admin123**
 - **Asigna al usuario admin_db privilegios globales para crear y eliminar bases de datos `CREATE` y `DROP` asi como para gestionar usuarios `CREATE USER` y `DROP USER`**
 
+```sql
+CREATE USER "admin_db"@"localhost" IDENTIFIED BY "admin123";
+
+GRANT CREATE, DROP, PROCESS ON *.* TO "admin_db"@"localhost";
+
+FLUSH PRIVILEGES;
+
+GRANT CREATE USER ON *.* TO "admin_db"@"localhost";
+
+FLUSH PRIVILEGES;
+
+```
+
 ## Ejercicio 4: Ver privilegios de un usuario
 
 - **El usuario admin_db tiene privilegios para crear y eliminar bases de datos**
 - **Usando el comando adecuado, verifica los privilegios asignados al usuario admin_db en el servidor MySQL**
+
+
 
