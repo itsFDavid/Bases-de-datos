@@ -1,0 +1,13 @@
+# version: '3' ya no se usa desde la version 2.5 parece
+services:
+  database:
+    image: mysql:8.0
+    ports:
+      - 3309:3306
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: abc
+      # MYSQL_DATABASE: prueba_docker
+      MYSQL_USER: prueba
+      MYSQL_PASSWORD: prueba
