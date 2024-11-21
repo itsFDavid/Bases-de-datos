@@ -41,17 +41,19 @@ def get_one_by_id(id):
     Get data by id
     """
     try:
+        # Creamos una conexion
         conexion = mysql.connection.cursor()
-        conexion.execute(f'SELECT * FROM user WHERE id = {id}')
-        users = conexion.fetchall()
-        results = [{
-            "id": users[0],
-            "username": users[1]
-        }]
+        conexion.execute(f'SELECT * FROM user WHERE id_user = {id}')
+        user = conexion.fetchone()
         conexion.close()
-        return jsonify(results)
+        if user is None:
+            return jsonify({"message": "User not found"}), 404
+        return jsonify({
+            "id": user[0],
+            "username": user[1]
+        })
     except Exception as e:
-        return f"Error {e}"
+        return f"Error {str(e)}"
 
 
 @app.route("/", methods = ["POST"])
