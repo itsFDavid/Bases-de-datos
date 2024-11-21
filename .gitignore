@@ -2,3 +2,6 @@
 *.drawio.bkp
 *.drawio.dtmp
 
+mysql-prueba/db
+
+**/db
