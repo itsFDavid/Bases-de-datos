@@ -1,0 +1,15 @@
+CREATE DATABASE p1;
+USE p1;
+
+CREATE USER "pako"@"%" IDENTIFIED BY "123";
+
+GRANT ALL ON p1.* TO "pako"@"%";
+
+FLUSH PRIVILEGES;
+
+
+
+CREATE TABLE clientes(
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    saldo DOUBLE(8,2) DEFAULT(0) NOT NULL CHECK(saldo >= 0),
+);
